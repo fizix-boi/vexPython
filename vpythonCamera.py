@@ -59,7 +59,7 @@ def stillShot(scene, numFrame, framer):
     for it in range(numFrame):
         scene.capture('frame'+str(int(framer.frameNext)))
         framer.encFrame()
-    vp.sleep(2)#0.2 * numFrames)
+    vp.sleep(0.5)#0.2 * numFrames)
         
 def ambientLinCom(ambientScaling, linearProp, colorVector):
     return(((1 - linearProp) * (ambientScaling * vp.vector(1, 1, 1))) + (linearProp * colorVector))
